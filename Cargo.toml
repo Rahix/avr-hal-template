@@ -13,18 +13,18 @@ embedded-hal = "0.2.3"
 [dependencies.arduino-hal]
 git = "https://github.com/rahix/avr-hal"
 rev = "8f0e0000d18d0fce3e6e3d8ab950b13a578d51cd"
-{% case board %}
-  {% when "Arduino Leonardo" %}
+{% case board -%}
+  {%- when "Arduino Leonardo" -%}
     features = ["arduino-leonardo"]
-  {% when "Arduino Mega 2560" %}
+  {%- when "Arduino Mega 2560" -%}
     features = ["arduino-mega2560"]
-  {% when "Arduino Nano" %}
+  {%- when "Arduino Nano" -%}
     features = ["arduino-nano"]
-  {% when "Arduino Uno" %}
+  {%- when "Arduino Uno" -%}
     features = ["arduino-uno"]
-  {% when "SparkFun ProMicro" %}
+  {%- when "SparkFun ProMicro" -%}
     features = ["sparkfun-promicro"]
-{% endcase %}
-{% comment %}
+{%- endcase %}
+{%- comment %}
 # vim: ft=toml.jinja2
 {% endcomment %}
