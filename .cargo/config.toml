@@ -1,0 +1,33 @@
+[build]
+{% case board %}
+  {% when "Arduino Leonardo" %}
+    target = "avr-specs/avr-atmega32u4.json"
+  {% when "Arduino Mega 2560" %}
+    target = "avr-specs/avr-atmega2560.json"
+  {% when "Arduino Nano" %}
+    target = "avr-specs/avr-atmega328p.json"
+  {% when "Arduino Uno" %}
+    target = "avr-specs/avr-atmega328p.json"
+  {% when "SparkFun ProMicro" %}
+    target = "avr-specs/avr-atmega32u4.json"
+{% endcase %}
+
+[target.'cfg(target_arch = "avr")']
+{% case board %}
+  {% when "Arduino Leonardo" %}
+    runner = "ravedude leonardo"
+  {% when "Arduino Mega 2560" %}
+    runner = "ravedude mega2560 -cb 57600"
+  {% when "Arduino Nano" %}
+    runner = "ravedude nano -cb 57600"
+  {% when "Arduino Uno" %}
+    runner = "ravedude uno -cb 57600"
+  {% when "SparkFun ProMicro" %}
+    runner = "ravedude promicro"
+{% endcase %}
+
+[unstable]
+build-std = ["core"]
+{% comment %}
+# vim: ft=toml.jinja2
+{% endcomment %}

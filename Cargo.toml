@@ -1,0 +1,30 @@
+[package]
+name = "{{project-name}}"
+version = "0.1.0"
+authors = ["{{authors}}"]
+edition = "2018"
+
+[dependencies]
+panic-halt = "0.2.0"
+ufmt = "0.1.0"
+nb = "0.1.2"
+embedded-hal = "0.2.3"
+
+[dependencies.arduino-hal]
+git = "https://github.com/rahix/avr-hal"
+rev = "8f0e0000d18d0fce3e6e3d8ab950b13a578d51cd"
+{% case board %}
+  {% when "Arduino Leonardo" %}
+    features = ["arduino-leonardo"]
+  {% when "Arduino Mega 2560" %}
+    features = ["arduino-mega2560"]
+  {% when "Arduino Nano" %}
+    features = ["arduino-nano"]
+  {% when "Arduino Uno" %}
+    features = ["arduino-uno"]
+  {% when "SparkFun ProMicro" %}
+    features = ["sparkfun-promicro"]
+{% endcase %}
+{% comment %}
+# vim: ft=toml.jinja2
+{% endcomment %}

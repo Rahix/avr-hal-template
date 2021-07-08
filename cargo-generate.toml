@@ -1,0 +1,11 @@
+[placeholders.board]
+type = "string"
+prompt = "Which board do you use?"
+choices = [
+  "Arduino Leonardo",
+  "Arduino Mega 2560",
+  "Arduino Nano",
+  "Arduino Uno",
+  "SparkFun ProMicro",
+]
+default = "Arduino Uno"
