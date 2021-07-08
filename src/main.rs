@@ -8,7 +8,28 @@ fn main() -> ! {
     let dp = arduino_hal::Peripherals::take().unwrap();
     let pins = arduino_hal::pins!(dp);
 
+    /*
+     * For examples (and inspiration), head to
+     *
+     *     https://github.com/Rahix/avr-hal/tree/next/examples
+     *
+     * NOTE: Not all examples were ported to all boards!  There is a good chance though, that code
+     * for a different board can be adapted for yours.  The Arduino Uno currently has the most
+     * examples available.
+     */
+
+    {% case board -%}
+      {%- when "Arduino Leonardo", "Arduino Mega 2560", "Arduino Nano", "Arduino Uno" -%}
+    let mut led = pins.d13.into_output();
+      {%- when "SparkFun ProMicro" -%}
+    let mut led = pins.led_rx.into_output();
+    {%- endcase %}
+
     loop {
+        led.toggle();
         arduino_hal::delay_ms(1000);
     }
 }
+{%- comment %}
+# vim: ft=rust.jinja2
+{% endcomment %}
