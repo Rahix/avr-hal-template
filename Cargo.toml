@@ -25,6 +25,19 @@ rev = "8f0e0000d18d0fce3e6e3d8ab950b13a578d51cd"
   {%- when "SparkFun ProMicro" -%}
     features = ["sparkfun-promicro"]
 {%- endcase %}
+
+# Configure the build for minimal size - AVRs have very little program memory
+[profile.dev]
+panic = "abort"
+lto = true
+opt-level = "s"
+
+[profile.release]
+panic = "abort"
+codegen-units = 1
+debug = true
+lto = true
+opt-level = "s"
 {%- comment %}
 # vim: ft=toml.jinja2
 {% endcomment %}
