@@ -5,6 +5,11 @@ authors = ["{{authors}}"]
 edition = "2018"
 license = "MIT OR Apache-2.0"
 
+[[bin]]
+name = "{{project-name}}"
+test = false
+bench = false
+
 [dependencies]
 panic-halt = "0.2.0"
 ufmt = "0.1.0"
