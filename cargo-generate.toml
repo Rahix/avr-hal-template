@@ -7,5 +7,6 @@ choices = [
   "Arduino Nano",
   "Arduino Uno",
   "SparkFun ProMicro",
+  "Nano168",
 ]
 default = "Arduino Uno"

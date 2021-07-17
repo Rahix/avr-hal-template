@@ -30,6 +30,8 @@ rev = "ac72adbe6db8900c41681b759ff62a11f2915916"
     features = ["arduino-uno"]
   {%- when "SparkFun ProMicro" -%}
     features = ["sparkfun-promicro"]
+  {%- when "Nano168" -%}
+    features = ["nano168"]
 {%- endcase %}
 
 # Configure the build for minimal size - AVRs have very little program memory
