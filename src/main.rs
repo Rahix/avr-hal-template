@@ -19,7 +19,7 @@ fn main() -> ! {
      */
 
     {% case board -%}
-      {%- when "Arduino Leonardo", "Arduino Mega 2560", "Arduino Nano", "Arduino Uno" -%}
+      {%- when "Arduino Leonardo", "Arduino Mega 2560", "Arduino Nano", "Arduino Uno", "Nano168" -%}
     let mut led = pins.d13.into_output();
       {%- when "SparkFun ProMicro" -%}
     let mut led = pins.led_rx.into_output();
