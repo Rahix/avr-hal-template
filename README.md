@@ -7,6 +7,7 @@ time:
  - Arduino Leonardo
  - Arduino Mega 2560
  - Arduino Nano
+ - Arduino Micro
  - Arduino Uno
  - SparkFun ProMicro
 
