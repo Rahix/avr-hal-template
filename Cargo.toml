@@ -18,7 +18,7 @@ embedded-hal = "0.2.3"
 
 [dependencies.arduino-hal]
 git = "https://github.com/rahix/avr-hal"
-rev = "ac72adbe6db8900c41681b759ff62a11f2915916"
+rev = "f84c0dff774c2292bc932b670955165161ecc7d1"
 {% case board -%}
   {%- when "Arduino Leonardo" -%}
     features = ["arduino-leonardo"]
