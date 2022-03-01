@@ -20,6 +20,11 @@ fn main() -> ! {
 
     {% case board -%}
       {%- when "Arduino Leonardo", "Arduino Mega 2560", "Arduino Nano", "Arduino Uno", "Nano168" -%}
+    let mut serial = arduino_hal::default_serial!(dp, pins, 57600); // not strictly necessary, but still useful
+    let _ = ufmt::uwriteln!(&mut serial, "hello from Arduino");
+
+    let mut adc = arduino_hal::Adc::new(dp.ADC, Default::default()); // only needed if you want to sample analog pins
+
     let mut led = pins.d13.into_output();
       {%- when "SparkFun ProMicro" -%}
     let mut led = pins.led_rx.into_output();
