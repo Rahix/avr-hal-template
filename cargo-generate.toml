@@ -2,6 +2,7 @@
 type = "string"
 prompt = "Which board do you use?"
 choices = [
+  "Adafruit Trinket",
   "Arduino Leonardo",
   "Arduino Mega 2560",
   "Arduino Nano",
