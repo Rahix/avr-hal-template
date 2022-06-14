@@ -36,7 +36,6 @@
 
 [unstable]
 build-std = ["core"]
-build-std-features = ["compiler-builtins-mangled-names"]
 {%- comment %}
 # vim: ft=toml.jinja2
 {% endcomment %}
