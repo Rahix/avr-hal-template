@@ -28,6 +28,8 @@ rev = "1aacefb335517f85d0de858231e11055d9768cdf"
     features = ["arduino-mega2560"]
   {%- when "Arduino Nano" -%}
     features = ["arduino-nano"]
+  {%- when "Arduino Micro" -%}
+    features = ["arduino-micro"]
   {%- when "Arduino Uno" -%}
     features = ["arduino-uno"]
   {%- when "SparkFun ProMicro" -%}
