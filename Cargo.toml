@@ -39,14 +39,12 @@ rev = "1aacefb335517f85d0de858231e11055d9768cdf"
 # Configure the build for minimal size - AVRs have very little program memory
 [profile.dev]
 panic = "abort"
-lto = true
 opt-level = "s"
 
 [profile.release]
 panic = "abort"
 codegen-units = 1
 debug = true
-lto = true
 opt-level = "s"
 {%- comment %}
 # vim: ft=toml.jinja2
