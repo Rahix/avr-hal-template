@@ -2,6 +2,8 @@
 {% case board -%}
   {%- when "Adafruit Trinket" -%}
     target = "avr-specs/avr-attiny85.json"
+  {%- when "Adafruit Trinket Pro" -%}
+    target = "avr-specs/avr-atmega328p.json"
   {%- when "Arduino Leonardo" -%}
     target = "avr-specs/avr-atmega32u4.json"
   {%- when "Arduino Mega 2560" -%}
@@ -20,6 +22,8 @@
 {% case board -%}
   {%- when "Adafruit Trinket" -%}
     runner = "ravedude trinket"
+  {%- when "Adafruit Trinket Pro" -%}
+    runner = "ravedude trinket-pro"
   {%- when "Arduino Leonardo" -%}
     runner = "ravedude leonardo"
   {%- when "Arduino Mega 2560" -%}

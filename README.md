@@ -9,6 +9,8 @@ time:
  - Arduino Nano
  - Arduino Uno
  - SparkFun ProMicro
+ - Adafruit Trinket
+ - Adafruit Trinket Pro
 
 ## Usage
 If you don't have them already, install [`cargo-generate`] and [`ravedude`]:
