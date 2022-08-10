@@ -22,6 +22,8 @@ rev = "1aacefb335517f85d0de858231e11055d9768cdf"
 {% case board -%}
   {%- when "Adafruit Trinket" -%}
     features = ["trinket"]
+  {%- when "Adafruit Trinket Pro" -%}
+    features = ["trinket-pro"]
   {%- when "Arduino Leonardo" -%}
     features = ["arduino-leonardo"]
   {%- when "Arduino Mega 2560" -%}
