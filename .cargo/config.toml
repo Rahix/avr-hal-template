@@ -10,6 +10,8 @@
     target = "avr-specs/avr-atmega2560.json"
   {%- when "Arduino Nano" -%}
     target = "avr-specs/avr-atmega328p.json"
+  {%- when "Arduino Nano New Bootloader" -%}
+    target = "avr-specs/avr-atmega328p.json"
   {%- when "Arduino Uno" -%}
     target = "avr-specs/avr-atmega328p.json"
   {%- when "SparkFun ProMicro" -%}
@@ -30,6 +32,8 @@
     runner = "ravedude mega2560 -cb 57600"
   {%- when "Arduino Nano" -%}
     runner = "ravedude nano -cb 57600"
+  {%- when "Arduino Nano New Bootloader" -%}
+    runner = "ravedude nano-new -cb 57600"
   {%- when "Arduino Uno" -%}
     runner = "ravedude uno -cb 57600"
   {%- when "SparkFun ProMicro" -%}
