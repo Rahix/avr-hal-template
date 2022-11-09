@@ -28,6 +28,8 @@ rev = "3b8f39fa2ec5e3359c7bedc33d982e75e8cc3700"
     features = ["arduino-leonardo"]
   {%- when "Arduino Mega 2560" -%}
     features = ["arduino-mega2560"]
+  {%- when "Arduino Mega 1280" -%}
+    features = ["arduino-mega1280"]
   {%- when "Arduino Nano" -%}
     features = ["arduino-nano"]
   {%- when "Arduino Nano New Bootloader" -%}

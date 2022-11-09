@@ -8,6 +8,8 @@
     target = "avr-specs/avr-atmega32u4.json"
   {%- when "Arduino Mega 2560" -%}
     target = "avr-specs/avr-atmega2560.json"
+  {%- when "Arduino Mega 1280" -%}
+    target = "avr-specs/avr-atmega1280.json"
   {%- when "Arduino Nano" -%}
     target = "avr-specs/avr-atmega328p.json"
   {%- when "Arduino Nano New Bootloader" -%}
@@ -30,6 +32,8 @@
     runner = "ravedude leonardo"
   {%- when "Arduino Mega 2560" -%}
     runner = "ravedude mega2560 -cb 57600"
+  {%- when "Arduino Mega 1280" -%}
+    runner = "ravedude mega1280 -cb 57600"
   {%- when "Arduino Nano" -%}
     runner = "ravedude nano -cb 57600"
   {%- when "Arduino Nano New Bootloader" -%}
