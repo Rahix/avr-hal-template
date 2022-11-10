@@ -16,7 +16,7 @@ choices = [
 default = "Arduino Uno"
 
 [template]
-ignore=["README.md"]
+ignore = ["README.md"]
 
 [hooks]
 post = ["rename-readme.rhai"]
