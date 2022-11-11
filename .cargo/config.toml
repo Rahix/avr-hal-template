@@ -1,5 +1,7 @@
 [build]
 {% case board -%}
+  {%- when "Digispark + Micronucleus" -%}
+    target = "avr-specs/avr-attiny85.json"
   {%- when "Adafruit Trinket" -%}
     target = "avr-specs/avr-attiny85.json"
   {%- when "Adafruit Trinket Pro" -%}
@@ -22,6 +24,8 @@
 
 [target.'cfg(target_arch = "avr")']
 {% case board -%}
+  {%- when "Digispark + Micronucleus" -%}
+    runner = "micronucleus-runner"
   {%- when "Adafruit Trinket" -%}
     runner = "ravedude trinket"
   {%- when "Adafruit Trinket Pro" -%}

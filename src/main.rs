@@ -19,7 +19,7 @@ fn main() -> ! {
      */
 
     {% case board -%}
-      {%- when "Adafruit Trinket" -%}
+      {%- when "Adafruit Trinket", "Digispark + Micronucleus" -%}
     let mut led = pins.d1.into_output();
       {%- when "Arduino Leonardo", "Arduino Mega 2560", "Arduino Nano", "Arduino Nano New Bootloader", "Arduino Uno", "Nano168", "Adafruit Trinket Pro" -%}
     let mut led = pins.d13.into_output();
