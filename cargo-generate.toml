@@ -14,3 +14,9 @@ choices = [
   "Nano168",
 ]
 default = "Arduino Uno"
+
+[template]
+ignore=["README.md"]
+
+[hooks]
+post = ["rename-readme.rhai"]
