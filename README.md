@@ -6,6 +6,7 @@ time:
 
  - Arduino Leonardo
  - Arduino Mega 2560
+ - Arduino Mega 1280
  - Arduino Nano
  - Arduino Nano New Bootloader (Manufactured after January 2018)
  - Arduino Uno
