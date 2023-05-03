@@ -7,6 +7,9 @@ use panic_halt as _;
 fn main() -> ! {
     let dp = arduino_hal::Peripherals::take().unwrap();
     let pins = arduino_hal::pins!(dp);
+    {%- if use_uart_console %}
+    let mut serial = arduino_hal::default_serial!(dp, pins, 57600);
+    {%- endif %}
 
     /*
      * For examples (and inspiration), head to
@@ -35,6 +38,11 @@ fn main() -> ! {
       {%- when "SparkFun ProMicro" -%}
     let mut led = pins.led_rx.into_output();
     {%- endcase %}
+
+    {% if use_uart_console -%}
+    ufmt::uwriteln!(&mut serial, "Hello from {{ board }}!").void_unwrap();
+
+    {% endif -%}
 
     loop {
         led.toggle();
