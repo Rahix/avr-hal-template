@@ -13,6 +13,7 @@ time:
  - SparkFun ProMicro
  - Adafruit Trinket
  - Adafruit Trinket Pro
+ - Digispark + Micronucleus
 
 ## Usage
 If you don't have them already, install [`cargo-generate`] and [`ravedude`]:
@@ -21,6 +22,13 @@ If you don't have them already, install [`cargo-generate`] and [`ravedude`]:
 cargo install cargo-generate
 cargo install ravedude
 ```
+
+Alternatively if you are uploading to a board with the Micronucleus 'virtual usb' bootloader use [`micronucleus-runner`]:
+```bash
+cargo install cargo-generate
+cargo install micronucleus-runner
+```
+
 
 Then instanciate this template:
 
@@ -38,8 +46,8 @@ cargo run
 and see a blinky flashed to your board!
 
 [`cargo-generate`]: https://github.com/cargo-generate/cargo-generate
-[`ravedude`]: https://github.com/Rahix/avr-hal/tree/next/ravedude
-
+[`ravedude`]: https://github.com/Rahix/avr-hal/tree/main/ravedude
+[`micronucleus-runner`]:https://github.com/Rahix/avr-hal/tree/main/micronucleus-runner
 ## License
 Licensed under either of
 

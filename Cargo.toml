@@ -20,6 +20,8 @@ embedded-hal = "0.2.3"
 git = "https://github.com/rahix/avr-hal"
 rev = "7dfa6d322b9df98b2d98afe0e14a97afe0187ac1"
 {% case board -%}
+  {%- when "Digispark + Micronucleus" -%}
+    features = ["digispark"]
   {%- when "Adafruit Trinket" -%}
     features = ["trinket"]
   {%- when "Adafruit Trinket Pro" -%}

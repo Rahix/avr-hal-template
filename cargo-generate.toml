@@ -12,6 +12,7 @@ choices = [
   "Arduino Uno",
   "SparkFun ProMicro",
   "Nano168",
+  "Digispark + Micronucleus"
 ]
 default = "Arduino Uno"
 
