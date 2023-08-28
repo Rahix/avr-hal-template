@@ -22,7 +22,7 @@ cargo install cargo-generate
 cargo install ravedude
 ```
 
-Then instanciate this template:
+Then instantiate this template:
 
 ```bash
 cargo generate --git https://github.com/Rahix/avr-hal-template.git
