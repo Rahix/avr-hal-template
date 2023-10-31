@@ -32,7 +32,10 @@ fn main() -> ! {
         "Adafruit Trinket Pro"
       -%}
     let mut led = pins.d13.into_output();
-      {%- when "SparkFun ProMicro" -%}
+      {%- when
+        "SparkFun ProMicro",
+        "SparFun ProMini 5v"
+      -%}
     let mut led = pins.led_rx.into_output();
     {%- endcase %}
 
