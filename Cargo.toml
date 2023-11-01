@@ -18,7 +18,7 @@ embedded-hal = "0.2.3"
 
 [dependencies.arduino-hal]
 git = "https://github.com/rahix/avr-hal"
-rev = "7dfa6d322b9df98b2d98afe0e14a97afe0187ac1"
+rev = "190f2c3cb8d29e10f71119352b912369dc5a1fb7"
 {% case board -%}
   {%- when "Adafruit Trinket" -%}
     features = ["trinket"]
