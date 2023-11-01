@@ -18,6 +18,8 @@
     target = "avr-specs/avr-atmega328p.json"
   {%- when "SparkFun ProMicro" -%}
     target = "avr-specs/avr-atmega32u4.json"
+  {%- when "SparkFun ProMini 5v" -%}
+    target = "avr-specs/avr-atmega328p.json"
   {%- when "Nano168" -%}
     target = "avr-specs/avr-atmega168.json"
 {%- endcase %}
@@ -42,6 +44,8 @@
     runner = "ravedude uno -cb 57600"
   {%- when "SparkFun ProMicro" -%}
     runner = "ravedude promicro"
+  {%- when "SparkFun ProMini 5v" -%}
+    runner = "ravedude promini-5v"
   {%- when "Nano168" -%}
     runner = "ravedude nano168 -cb 57600"
 {%- endcase %}
