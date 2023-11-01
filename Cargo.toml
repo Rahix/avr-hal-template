@@ -39,7 +39,7 @@ rev = "190f2c3cb8d29e10f71119352b912369dc5a1fb7"
   {%- when "SparkFun ProMicro" -%}
     features = ["sparkfun-promicro"]
   {%- when "SparkFun ProMini 5v" -%}
-    features = ["sparkfun-promicro-5v"]
+    features = ["sparkfun-promini-5v"]
   {%- when "Nano168" -%}
     features = ["nano168"]
 {%- endcase %}

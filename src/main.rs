@@ -29,13 +29,11 @@ fn main() -> ! {
         "Arduino Nano New Bootloader",
         "Arduino Uno",
         "Nano168",
-        "Adafruit Trinket Pro"
+        "Adafruit Trinket Pro",
+        "SparkFun ProMini 5v"
       -%}
     let mut led = pins.d13.into_output();
-      {%- when
-        "SparkFun ProMicro",
-        "SparFun ProMini 5v"
-      -%}
+      {%- when "SparkFun ProMicro" -%}
     let mut led = pins.led_rx.into_output();
     {%- endcase %}
 
