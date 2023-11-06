@@ -38,6 +38,8 @@ rev = "21342dcace7184f01fdc4e9703b01197bd4b4b4f"
     features = ["arduino-uno"]
   {%- when "SparkFun ProMicro" -%}
     features = ["sparkfun-promicro"]
+  {%- when "SparkFun ProMini 3v" -%}
+    features = ["sparkfun-promini-3v"]
   {%- when "SparkFun ProMini 5v" -%}
     features = ["sparkfun-promini-5v"]
   {%- when "Nano168" -%}
