@@ -11,6 +11,7 @@ choices = [
   "Arduino Nano New Bootloader",
   "Arduino Uno",
   "SparkFun ProMicro",
+  "SparkFun ProMini 3v",
   "SparkFun ProMini 5v",
   "Nano168",
 ]
