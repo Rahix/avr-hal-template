@@ -12,7 +12,7 @@ bench = false
 
 [dependencies]
 panic-halt = "0.2.0"
-ufmt = "0.1.0"
+ufmt = "0.2.0"
 nb = "0.1.2"
 embedded-hal = "0.2.3"
 
