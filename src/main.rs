@@ -30,7 +30,7 @@ fn main() -> ! {
         "Arduino Uno",
         "Nano168",
         "Adafruit Trinket Pro",
-        "SparkFun ProMini 3v",
+        "SparkFun ProMini 3v3",
         "SparkFun ProMini 5v"
       -%}
     let mut led = pins.d13.into_output();
