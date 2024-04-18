@@ -46,6 +46,12 @@ rev = "21342dcace7184f01fdc4e9703b01197bd4b4b4f"
     features = ["nano168"]
 {%- endcase %}
 
+# The latest releases of `proc-macro2` do not support the rust toolchain that
+# we use.  Thus, we must fix this dependency to an older version where our
+# toolchain is still supported.  See https://github.com/Rahix/avr-hal/issues/537
+[build-dependencies.proc-macro2]
+version = "=1.0.79"
+
 # Configure the build for minimal size - AVRs have very little program memory
 [profile.dev]
 panic = "abort"
