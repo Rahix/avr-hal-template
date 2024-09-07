@@ -1,7 +1,7 @@
 {
   "arch": "avr",
   "atomic-cas": false,
-  "cpu": "atmega1280",
+  "cpu": "atmega164pa",
   "crt-objects-fallback": "false",
   "data-layout": "e-P1-p:16:8-i8:8-i16:8-i32:8-i64:8-f32:8-f64:8-n8-a:8",
   "eh-frame-header": false,
@@ -27,11 +27,11 @@
   "no-default-libraries": false,
   "pre-link-args": {
     "gnu-cc": [
-      "-mmcu=atmega1280",
+      "-mmcu=atmega164pa",
       "-Wl,--as-needed,--print-memory-usage"
     ],
     "gnu-lld-cc": [
-      "-mmcu=atmega1280",
+      "-mmcu=atmega164pa",
       "-Wl,--as-needed,--print-memory-usage"
     ]
   },
