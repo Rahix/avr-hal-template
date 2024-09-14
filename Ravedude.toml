@@ -1,0 +1,43 @@
+[general]
+{% case board -%}
+  {%- when "Adafruit Trinket" -%}
+    board = "trinket"
+  {%- when "Adafruit Trinket Pro" -%}
+    board = "trinket-pro"
+  {%- when "Arduino Leonardo" -%}
+    board = "leonardo"
+  {%- when "Arduino Mega 2560" -%}
+    board = "mega2560"
+  {%- when "Arduino Mega 1280" -%}
+    board = "mega1280"
+  {%- when "Arduino Nano" -%}
+    board = "nano"
+  {%- when "Arduino Nano New Bootloader" -%}
+    board = "nano-new"
+  {%- when "Arduino Uno" -%}
+    board = "uno"
+  {%- when "SparkFun ProMicro" -%}
+    board = "promicro"
+  {%- when "SparkFun ProMini 3v3" -%}
+    board = "promini-3v3"
+  {%- when "SparkFun ProMini 5v" -%}
+    board = "promini-5v"
+  {%- when "Nano168" -%}
+    board = "nano168"
+{%- endcase %}
+{% case board -%}
+  {%- when
+    "Arduino Mega 2560",
+    "Arduino Mega 1280",
+    "Arduino Nano",
+    "Arduino Nano New Bootloader",
+    "Arduino Uno",
+    "Nano168"
+  -%}
+# After flashing, open the serial console at 57600 baud.
+open-console = true
+serial-baudrate = 57600
+{%- endcase %}
+{%- comment %}
+# vim: ft=toml.jinja2
+{% endcomment %}
