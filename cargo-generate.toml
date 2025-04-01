@@ -17,6 +17,11 @@ choices = [
 ]
 default = "Arduino Uno"
 
+[placeholders.use_uart_console]
+type = "bool"
+prompt = "Include boilerplate for UART console?"
+default = false
+
 [template]
 ignore=["README.md"]
 
