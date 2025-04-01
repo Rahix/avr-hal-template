@@ -1,29 +1,30 @@
 [build]
+target = "avr-none"
 {% case board -%}
   {%- when "Adafruit Trinket" -%}
-    target = "avr-specs/avr-attiny85.json"
+    rustflags = ["-C", "target-cpu=attiny85"]
   {%- when "Adafruit Trinket Pro" -%}
-    target = "avr-specs/avr-atmega328p.json"
+    rustflags = ["-C", "target-cpu=atmega328p"]
   {%- when "Arduino Leonardo" -%}
-    target = "avr-specs/avr-atmega32u4.json"
+    rustflags = ["-C", "target-cpu=atmega32u4"]
   {%- when "Arduino Mega 2560" -%}
-    target = "avr-specs/avr-atmega2560.json"
+    rustflags = ["-C", "target-cpu=atmega2560"]
   {%- when "Arduino Mega 1280" -%}
-    target = "avr-specs/avr-atmega1280.json"
+    rustflags = ["-C", "target-cpu=atmega1280"]
   {%- when "Arduino Nano" -%}
-    target = "avr-specs/avr-atmega328p.json"
+    rustflags = ["-C", "target-cpu=atmega328p"]
   {%- when "Arduino Nano New Bootloader" -%}
-    target = "avr-specs/avr-atmega328p.json"
+    rustflags = ["-C", "target-cpu=atmega328p"]
   {%- when "Arduino Uno" -%}
-    target = "avr-specs/avr-atmega328p.json"
+    rustflags = ["-C", "target-cpu=atmega328p"]
   {%- when "SparkFun ProMicro" -%}
-    target = "avr-specs/avr-atmega32u4.json"
+    rustflags = ["-C", "target-cpu=atmega32u4"]
   {%- when "SparkFun ProMini 3v3" -%}
-    target = "avr-specs/avr-atmega328p.json"
+    rustflags = ["-C", "target-cpu=atmega328p"]
   {%- when "SparkFun ProMini 5v" -%}
-    target = "avr-specs/avr-atmega328p.json"
+    rustflags = ["-C", "target-cpu=atmega328p"]
   {%- when "Nano168" -%}
-    target = "avr-specs/avr-atmega168.json"
+    rustflags = ["-C", "target-cpu=atmega168"]
 {%- endcase %}
 
 [target.'cfg(target_arch = "avr")']
