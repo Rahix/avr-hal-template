@@ -37,7 +37,20 @@
 # After flashing, open the serial console at 57600 baud.
 open-console = true
 serial-baudrate = 57600
+  {%- when
+    "Arduino Leonardo",
+    "Arduino ProMicro"
+  -%}
+# The {{ board }} does not have a UART console like other Arduino boards.
+# Instead, it can emulate a console device over USB, but this is not yet
+# supported in `avr-hal`.  To get console output from an {{ board }}, you
+# need to connect an external usb-serial converter to the TX/RX pins of your
+# board.
+open-console = false
 {%- endcase %}
+
+# For documentation about this file, check here:
+# https://github.com/Rahix/avr-hal/blob/main/ravedude/README.md#ravedudetoml-format
 {%- comment %}
 # vim: ft=toml.jinja2
 {% endcomment %}
