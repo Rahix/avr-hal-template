@@ -1,6 +1,7 @@
 #![no_std]
 #![no_main]
 
+#[allow(unused_imports)]
 use panic_halt as _;
 
 #[arduino_hal::entry]
