@@ -11,8 +11,8 @@ time:
  - Arduino Nano New Bootloader (Manufactured after January 2018)
  - Arduino Uno
  - SparkFun ProMicro
- - SpartFun ProMini 3.3V
- - SpartFun ProMini 5v
+ - SparkFun ProMini 3.3V
+ - SparkFun ProMini 5v
  - Adafruit Trinket
  - Adafruit Trinket Pro
 
