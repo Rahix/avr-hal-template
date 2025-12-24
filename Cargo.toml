@@ -18,7 +18,7 @@ embedded-hal = "1.0"
 
 [dependencies.arduino-hal]
 git = "https://github.com/rahix/avr-hal"
-rev = "0f7fa4d01755f1985d95ed2015d5464a29154b05"
+rev = "ff4909c00ceee76d60f8bd7cc95bc0f3e2ab673f"
 {% case board -%}
   {%- when "Adafruit Trinket" -%}
     features = ["trinket"]
@@ -30,6 +30,8 @@ rev = "0f7fa4d01755f1985d95ed2015d5464a29154b05"
     features = ["arduino-mega2560"]
   {%- when "Arduino Mega 1280" -%}
     features = ["arduino-mega1280"]
+  {%- when "Arduino Micro" -%}
+    features = ["arduino-micro"]
   {%- when "Arduino Nano" -%}
     features = ["arduino-nano"]
   {%- when "Arduino Nano New Bootloader" -%}

@@ -10,6 +10,8 @@
     board = "mega2560"
   {%- when "Arduino Mega 1280" -%}
     board = "mega1280"
+  {%- when "Arduino Micro" -%}
+    board = "micro"
   {%- when "Arduino Nano" -%}
     board = "nano"
   {%- when "Arduino Nano New Bootloader" -%}
@@ -39,6 +41,7 @@ open-console = true
 serial-baudrate = 57600
   {%- when
     "Arduino Leonardo",
+    "Arduino Micro",
     "Arduino ProMicro"
   -%}
 # The {{ board }} does not have a UART console like other Arduino boards.

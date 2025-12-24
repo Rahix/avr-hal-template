@@ -11,6 +11,8 @@ target = "avr-none"
     rustflags = ["-C", "target-cpu=atmega2560"]
   {%- when "Arduino Mega 1280" -%}
     rustflags = ["-C", "target-cpu=atmega1280"]
+  {%- when "Arduino Micro" -%}
+    rustflags = ["-C", "target-cpu=atmega32u4"]
   {%- when "Arduino Nano" -%}
     rustflags = ["-C", "target-cpu=atmega328p"]
   {%- when "Arduino Nano New Bootloader" -%}
