@@ -2,7 +2,7 @@
 name = "{{project-name}}"
 version = "0.1.0"
 authors = ["{{authors}}"]
-edition = "2021"
+edition = "2024"
 license = "MIT OR Apache-2.0"
 
 [[bin]]
@@ -18,7 +18,7 @@ embedded-hal = "1.0"
 
 [dependencies.arduino-hal]
 git = "https://github.com/rahix/avr-hal"
-rev = "e5c8f37fe48419956e722490a82b9ca9b9fc61a2"
+rev = "0bbec46f7cfee8542f89f0257619d76cddbf835b"
 {% case board -%}
   {%- when "Adafruit Trinket" -%}
     features = ["trinket"]
